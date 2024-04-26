@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Mocker</title>
+          <link rel="stylesheet" href="index.css" />
+          <link rel="icon" href="falcon.png" />
+
+          <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css" />
+     </head>
+     <body>
+          <div class="container">
+               <div class="leftBoard">
+                    <img src="falcon.png" />
+                    <p>This application is designed to test the Authenticator's functions.</p>
+               </div>
+               <div class="rightBoard">
+                    <h2>Mocker</h2>
+                    <div class="contentLogin">
+                         <h2>Sign in to Mocker</h2>
+
+                         <span>Email</span>
+                         <input
+                              type="text"
+                              id="emailInput"
+                              placeholder="E.g. wayne123@gmail.com"
+                              class="inputLogin"
+                         />
+                         <span>Password</span>
+                         <input
+                              type="password"
+                              id="pwdInput"
+                              placeholder="E.g. 310f@92V"
+                              class="inputLogin"
+                         />
+                         <button id="loginBut" onclick="login()">Login</button>
+                         <h3>
+                              Don't have an account?
+                              <span onclick="showRegisterBox()">Sign up here</span>
+                         </h3>
+                    </div>
+               </div>
+               <div class="logincontainer">
+                    <div class="loginWrapper">
+                         <i class="uil uil-times closeIcon" onclick="showRegisterBox()"></i>
+                         <div class="contentSignup">
+                              <h2>Welcome to Mocker</h2>
+                              <h3>Register your account</h3>
+
+                              <span class="headerInput">Email</span>
+                              <input
+                                   type="text"
+                                   id="emailInput_signup"
+                                   placeholder="E.g. wayne123@gmail.com"
+                                   class="inputLogin"
+                                   autocomplete="off"
+                              />
+                              <span class="msgInput" id="msgInput_email"
+                                   >Please enter a valid email.</span
+                              >
+                              <span class="headerInput">Phone Number (+60)</span>
+                              <input
+                                   type="text"
+                                   id="phoneInput_signup"
+                                   placeholder="E.g. 60192452146"
+                                   class="inputLogin"
+                                   autocomplete="off"
+                              />
+                              <span class="msgInput" id="msgInput_phone"
+                                   >Please enter a valid phone number.</span
+                              >
+
+                              <span class="headerInput">Password</span>
+                              <input
+                                   type="password"
+                                   id="pwdInput_signup"
+                                   placeholder="E.g. 310f@92V"
+                                   class="inputLogin"
+                                   autocomplete="off"
+                              />
+                              <span class="msgInput" id="msgInput_pwd"
+                                   >Please enter a valid password.</span
+                              >
+
+                              <button id="signupBut" onclick="register()">Sign Up</button>
+                         </div>
+                    </div>
+               </div>
+               <div class="otpContainer">
+                    <div class="otpWrapper">
+                         <img src="otp-security.svg" />
+
+                         <h2>Verification</h2>
+                         <h3>Enter the code from Authenticator</h3>
+                         <input
+                              type="text"
+                              id="otpInput"
+                              placeholder="123456"
+                              class="inputLogin"
+                         />
+                         <span class="msgInput" id="msgInput_otp"
+                                   >Please enter a valid OTP.</span
+                              >
+                         <button onclick="submitOTP()">Submit</button>
+                    </div>
+               </div>
+               <div class="toastDiv">
+                    <ul id="toastUl"></ul>
+               </div>
+          </div>
+
+          <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database-compat.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha.js" integrity="sha512-RH0XQVwv9KazB3hSYl6pZtf9IlotaWuBIwwYBbq9pGI8hjjiensJAcrjMEZ8vcEQqHubeW3ETIyBN8ymcs3YEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+          <script src="index.js"></script>
+     </body>
+</html>

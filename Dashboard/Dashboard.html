@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Dashboard</title>
+
+     <link rel="icon" href="../falcon.png" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+     <link rel="stylesheet" href="Dashboard.css" />
+</head>
+
+<body>
+     <div class="contain">
+          <div class="upper">
+               <img src="../falcon.png" />
+          </div>
+          <div class="container">
+               <div class="leftBoard">
+                    <h2>Setup your Authenticator</h2>
+                    <p>
+                         FYP_Authenticator is developed to secure the authentication process by implementing 2FA,
+                         avoiding unauthorized actors from accessing the applications.
+                    </p>
+                    <div class="swiperDiv">
+                         <div class="myswiper" id="theswiper">
+                              <div class="swiper-wrapper">
+                                   <!-- Slides -->
+                                   <div class="swiper-slide aslide">
+                                        <img src="interface (1).jpg"
+                                             alt="" />
+                                   </div>
+                                   <div class="swiper-slide aslide">
+                                        <img src="interface (11).jpg"
+                                             alt="" />
+                                   </div>
+                                   <div class="swiper-slide aslide">
+                                        <img src="interface (5).jpg"
+                                             alt="" />
+                                   </div>
+                                   <div class="swiper-slide aslide">
+                                        <img src="interface (8).jpg"
+                                             alt="" />
+                                   </div>
+                                   <div class="swiper-slide aslide">
+                                        <img src="interface (4).jpg"
+                                             alt="" />
+                                   </div>
+                              </div>
+
+                              <div class="swiper-pagination"></div>
+
+                              <div class="swiper-prev-but">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
+                                        <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z"
+                                             transform="translate(6) rotate(90)" fill="#000"></path>
+                                   </svg>
+                              </div>
+                              <div class="swiper-next-but">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="6" height="10" viewBox="0 0 6 10">
+                                        <path d="M5,6a.908.908,0,0,1-.7-.3l-4-4A.967.967,0,0,1,.3.3.967.967,0,0,1,1.7.3L5,3.6,8.3.3A.967.967,0,0,1,9.7.3a.967.967,0,0,1,0,1.4l-4,4A.908.908,0,0,1,5,6Z"
+                                             transform="translate(0 10) rotate(-90)" fill="#000"></path>
+                                   </svg>
+                              </div>
+                         </div>
+
+                    </div>
+                    <h4>Steps:</h4>
+                    <h5>1. Register an account in FYP_Authenticator</h5>
+                    <h5>2. Click the "+" button</h5>
+                    <h5>3. Scan QR code or enter the key manually</h5>
+                    <h5>4. Click the "Connect" button</h5>
+                    <h5>5. Use the OTP to access Mocker</h5>
+                    <h3>Where is the Authenticator app? <span><a href="Authenticator v7.apk" download>Download here</a></span></h3>
+               </div>
+               <div class="rightBoard">
+                    <div class="contentRightboard">
+                         <h2 class="titleDashboard">Dashboard</h2>
+                         <div class="contentLogin">
+                              <h2>Scan here using FYP_Authenticator</h2>
+                              <div class="card">
+                                   <div class="qrCodeDiv">
+                                        <div id="qrCodeImg" class="qrCodeImg"></div>
+                                        <div class="keyDiv">
+                                             <h3>******</h3>
+                                        </div>
+                                   </div>
+                              </div>
+                              <h4>Touch the QR to show key</h4>
+
+                              <button id="loginBut" onclick="logout()">Log out</button>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+          <div class="toastDiv">
+               <ul id="toastUl"></ul>
+          </div>
+     </div>
+
+     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-app-compat.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/9.18.0/firebase-database-compat.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bcryptjs/2.4.3/bcrypt.min.js"></script>
+     <script src="Dashboard.js"></script>
+</body>
+
+</html>
