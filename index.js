@@ -111,7 +111,7 @@ function checkIsConnected(uidUser) {
                showToast('success', 'Login successful');
                localStorage.setItem('UID', JSON.stringify(UIDWEBUSER));
                localStorage.setItem('UID_email', JSON.stringify(UIDWEBEMAIL));
-               window.location.href = 'Dashboard/dashboard.html';
+               window.location.href = 'Dashboard/Dashboard.html';
           }
      });
 }
