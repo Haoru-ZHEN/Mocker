@@ -466,7 +466,7 @@ function submitOTP() {
                                                        'UID_email',
                                                        JSON.stringify(UIDWEBEMAIL)
                                                   );
-                                                  window.location.href = 'Dashboard/dashboard.html';
+                                                  window.location.href = 'Dashboard/Dashboard.html';
                                              }
                                         });
                                    });
