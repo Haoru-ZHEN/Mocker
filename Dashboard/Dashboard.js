@@ -42,7 +42,7 @@ const swiper = new Swiper('.myswiper', {
 
 function logout() {
      localStorage.clear();
-     window.location.href = '../FYP_Mock.html';
+     window.location.href = '../index.html';
 }
 
 function isLogin() {
