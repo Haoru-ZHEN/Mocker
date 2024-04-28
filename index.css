@@ -226,6 +226,13 @@ body {
      margin-bottom: 10px;
 }
 
+.loginWrapper .pwdTips{
+     font-size: 12px;
+     color: #7d7c7c;
+     font-weight: 300;
+     margin-bottom: 10px;
+}
+
 .loginWrapper .msgInput {
      display: none;
      font-size: 12px;
